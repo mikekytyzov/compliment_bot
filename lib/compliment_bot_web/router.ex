@@ -7,5 +7,9 @@ defmodule ComplimentBotWeb.Router do
 
   scope "/api", ComplimentBotWeb do
     pipe_through :api
+
+    scope "/bot" do
+      post "/webhook", BotController, :webhook
+    end
   end
 end

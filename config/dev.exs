@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :compliment_bot, ComplimentBot.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "",
   database: "compliment_bot_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
@@ -58,3 +58,5 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+import_config "dev.secret.exs"
